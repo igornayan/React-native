@@ -1,8 +1,10 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native';
 import Logo from './Moura.png'
+import { useNavigation } from '@react-navigation/native';
 
 export default function Page1() {
+  const navigation = useNavigation();
   return (
     <View style={styles.container}>
       <Image source={Logo} style={{resizeMode:'contain', width: 80}}/>
@@ -16,7 +18,7 @@ export default function Page1() {
       </TouchableOpacity>
       <StatusBar style="auto" />
     <View style={{flex: 1, justifyContent: 'flex-end'}}>
-      <TouchableOpacity style={styles.buttonBaixo} onPress={()=> console.warn("clicou")}>
+      <TouchableOpacity style={styles.buttonBaixo} onPress={()=> navigation.navigate("Page02")}>
       <Text style={styles.fonte}>Criar nova turma</Text>
       </TouchableOpacity>
     </View>

@@ -1,24 +1,24 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import {Groups } from '@screens/Groups'
-import {NewGroup } from '@screens/NewGroup'
-import { Players } from '@screens/Players';
+import Page1 from '../Page01';
+import Page2 from '../Page02';
+import Page3 from '../Page03';
 
 const {Navigator, Screen} = createNativeStackNavigator();
 
 export function AppRoutes(){
     return(
-        <Navigator>
+        <Navigator screenOptions={{headerShown: false}} initialRouteName='Page03'>
             <Screen
-                name="group"
-                component={Groups}
-            />
-            <Screen            
-                name="new"
-                component={NewGroup}
+                name="Page01"
+                component={Page1}
             />
             <Screen
-                name="players"
-                component={Players}
+                name= "Page02"
+                component={Page2}
+            />
+            <Screen
+                name="Page03"
+                component={Page3}
             />
         </Navigator>
     );
