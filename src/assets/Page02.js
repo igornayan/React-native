@@ -17,7 +17,7 @@ export default function Page2() {
                 <Text style={styles.fonte}>Nova turma</Text>
                 <Text style={{color:"#BFBFBF", fontSize:15, marginTop:5}}>Crie uma nova turma para adicionar pessoas</Text>
                 <TextInput style={{borderWidth: 2, width: 350, height: 50, borderRadius: 7, marginTop: 10, padding: 10, backgroundColor:'#262626', color: 'white'}}placeholder="Nome da turma" placeholderTextColor={'#BFBFBF'}></TextInput>
-                <TouchableOpacity style={styles.buttonBaixo} onPress={()=> console.warn("clicou")}>
+                <TouchableOpacity style={styles.buttonBaixo} onPress={()=> navigation.navigate('Page03')}>
                     <Text style={styles.fonte}>Criar nova turma</Text>
                 </TouchableOpacity>
             </View>
